@@ -4,16 +4,6 @@ const provinces = ['Western Cape', 'Gauteng', 'Northern Cape', 'Eastern Cape', '
 // A list of names:
 const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sfiso', 'Shailen', 'Frikkie']
 
-// A list of products with prices:
-const products = [
-  { product: 'banana', price: "2" },
-  { product: 'mango', price: 6 },
-  { product: 'potato', price: ' ' },
-  { product: 'avocado', price: "8" },
-  { product: 'coffee', price: 10 },
-  { product: 'tea', price: '' },
-]
-
 // 1. forEach basics:
 // Iterating over each province in provinces and logs it. 
 provinces.forEach((province) =>
@@ -65,3 +55,20 @@ const nameProvinceMap = names.reduce((acc, name, index) => {
 }, {});
 // Log the nameProvinceMap object. 
 console.log("7.Creating Object Mapping", nameProvinceMap);
+
+
+// A list of products with prices:
+const products = [
+  { product: 'banana', price: "2" },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: "8" },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+
+// 1. Log Products 
+// map extracts the product name from each item while join("/n") will create join the string on a new line .
+console.log(
+  products.map((item) => item.product).join("\n")
+);
