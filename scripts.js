@@ -42,3 +42,14 @@ console.log("2.Uppercase Transformation", upProvinces);
 const nameLengths = names.map((name) => name.length);
 //  Returns the array of name lengths.
 console.log("3.Name Lengths", nameLengths);
+
+// 4. Sorting
+// Sorts the provinces in Alphabetical order
+const sortedProvinces = [...provinces].sort();
+console.log("4.Sorting", sortedProvinces)
+
+// 5. Filtering "Cape"
+// filter returns an array of provinces that do not contain the word  "Cape".
+const nonCape = provinces.filter((province) => !province.includes("Cape"));
+console.log("5.Filtering Cape", nonCape.length);
+
