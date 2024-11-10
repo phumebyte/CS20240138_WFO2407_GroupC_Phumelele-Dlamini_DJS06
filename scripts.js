@@ -81,7 +81,7 @@ console.log(
     .map((item) => item.product)
 );
 
-//  3. Price Manipulation */
+//  3. Price Manipulation 
 console.log(
   products
     .filter(// filter selects items with non-empty and non-blank price. 
@@ -95,5 +95,17 @@ console.log(
       0
     ) 
 );
+
+// 4. Concatenate Product Names 
+console.log(
+  products.reduce(
+    // reduce concatenates each product name into a single comma-separated string. 
+    (str, item, index) =>
+      index === 0 ? item.product : `${str}, ${item.product}`,
+    ""
+  )
+);
+
+
 
 
