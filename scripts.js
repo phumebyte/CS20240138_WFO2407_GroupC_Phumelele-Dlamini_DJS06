@@ -32,7 +32,13 @@ names.forEach(
     ) 
 );
 
-//2. Uppercase Transformation
+// 2. Uppercase Transformation
 const upProvinces = provinces.map((province) => province.toUpperCase());
-// displays the transformed array. 
+// Displays the transformed array. 
 console.log("2.Uppercase Transformation", upProvinces);
+
+// 3. Name Lengths
+// Map function creates an array containing all the lengths of the names in the names array.
+const nameLengths = names.map((name) => name.length);
+//  Returns the array of name lengths.
+console.log("3.Name Lengths", nameLengths);
