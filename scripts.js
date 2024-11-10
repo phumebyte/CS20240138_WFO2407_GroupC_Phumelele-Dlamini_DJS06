@@ -31,3 +31,8 @@ names.forEach(
       `${name} (${provinces[index]})`
     ) 
 );
+
+//2. Uppercase Transformation
+const upProvinces = provinces.map((province) => province.toUpperCase());
+// displays the transformed array. 
+console.log("2.Uppercase Transformation", upProvinces);
