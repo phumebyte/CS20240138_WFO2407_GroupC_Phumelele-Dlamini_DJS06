@@ -53,3 +53,7 @@ console.log("4.Sorting", sortedProvinces)
 const nonCape = provinces.filter((province) => !province.includes("Cape"));
 console.log("5.Filtering Cape", nonCape.length);
 
+// 6. Finding 's' 
+// convert the strings to lowercase first then mapping checks if each name contains the letter "s" 
+const containingS = names.map((name) => name.toLowerCase().includes("s"));
+console.log("6. Finding s", containingS);
