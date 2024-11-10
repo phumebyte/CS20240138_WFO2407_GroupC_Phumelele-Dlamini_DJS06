@@ -126,6 +126,17 @@ console.log(
   })()
 );
 
+// 6. Object Transformation 
+console.log(
+  products.reduce((acc, item) => {
+    acc.push({
+      name: item.product,
+      cost: item.price,
+    });
+    return acc;
+  }, [])
+);
+
 
 
 
