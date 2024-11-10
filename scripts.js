@@ -72,3 +72,28 @@ const products = [
 console.log(
   products.map((item) => item.product).join("\n")
 );
+
+// 2. Filter by Name Length 
+// filter targets products whose product name length has 5 or fewer characters. 
+console.log(
+  products
+    .filter((item) => item.product.length <= 5)
+    .map((item) => item.product)
+);
+
+//  3. Price Manipulation */
+console.log(
+  products
+    .filter(// filter selects items with non-empty and non-blank price. 
+      (item) => item.price !== "" && item.price !== " "
+    ) 
+    .map((item) =>// map converts each price to a number.
+      Number(item.price)
+    )  
+    .reduce(// reduce sums the prices starting with 0. 
+      (sum, price) => sum + price,
+      0
+    ) 
+);
+
+
