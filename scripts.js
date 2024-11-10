@@ -57,3 +57,11 @@ console.log("5.Filtering Cape", nonCape.length);
 // convert the strings to lowercase first then mapping checks if each name contains the letter "s" 
 const containingS = names.map((name) => name.toLowerCase().includes("s"));
 console.log("6. Finding s", containingS);
+
+//  7. Creating Object Mapping 
+const nameProvinceMap = names.reduce((acc, name, index) => {
+  acc[name] = provinces[index];
+  return acc;
+}, {});
+// Log the nameProvinceMap object. 
+console.log("7.Creating Object Mapping", nameProvinceMap);
