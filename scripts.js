@@ -106,6 +106,26 @@ console.log(
   )
 );
 
+//  5. Find Extremes in Prices 
+console.log(
+  (() => {
+    const validProducts = products.filter(
+      (item) =>
+        item.price !== "" && item.price !== " " && !isNaN(Number(item.price))
+    );
+    const highest = validProducts.reduce(// reduce finds the product with the highest price and the lowest price.
+      (
+        max,
+        item 
+      ) => (Number(item.price) > Number(max.price) ? item : max)
+    );
+    const lowest = validProducts.reduce((min, item) =>
+      Number(item.price) < Number(min.price) ? item : min
+    );
+    return `Highest: ${highest.product}. Lowest: ${lowest.product}`; 
+  })()
+);
+
 
 
 
